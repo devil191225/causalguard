@@ -1,0 +1,13 @@
+{
+  "metrics": {
+    "detection_rate_clean_under_attack_windows": 0.965,
+    "detection_rate_fgsm_under_attack_windows": 0.964,
+    "detection_rate_pgd_under_attack_windows": 0.965,
+    "detection_rate_model_informed_under_attack_windows": 0.964,
+    "evasion_flip_rate_fgsm": 0.001,
+    "evasion_flip_rate_pgd": 0.0,
+    "epsilon_l_inf_scaled_space": 0.15,
+    "mean_l_inf_perturbation_fgsm_approx": 4.064911250799411
+  },
+  "subsample_rows": 128
+}

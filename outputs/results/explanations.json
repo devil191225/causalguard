@@ -1,0 +1,42 @@
+[
+  {
+    "sample_index": "494",
+    "anomalous_variables": [
+      "P3_B2022",
+      "P4_HT_PG"
+    ],
+    "causal_paths": [
+      "P3_B2022 (root cause)",
+      "P4_HT_PG (root cause)"
+    ],
+    "explanation": "\u2022 P3_B2022: actual=0.632, expected=0.000, deviation=0.632\n\u2022 P4_HT_PG: actual=0.071, expected=0.589, deviation=0.519\n\nRoot causes identified: P3_B2022, P4_HT_PG\n\nCounterfactual: If P3_B2022, P4_HT_PG had maintained normal values, the cascade would not have occurred."
+  },
+  {
+    "sample_index": "916",
+    "anomalous_variables": [
+      "P2_B2016",
+      "P2_B2017",
+      "P4_HT_LD",
+      "P4_HT_PG",
+      "P4_HT_RS"
+    ],
+    "causal_paths": [
+      "P2_B2016 <- P4_HT_LD, P4_HT_PG",
+      "P2_B2017 (independent)",
+      "P4_HT_LD (root cause)",
+      "P4_HT_PG <- P2_B2016",
+      "P4_HT_RS (root cause)"
+    ],
+    "explanation": "\u2022 P2_B2016: actual=0.045, expected=-1.732, deviation=1.777\n\u2022 P2_B2017: actual=0.822, expected=0.000, deviation=0.822\n\u2022 P4_HT_LD: actual=0.588, expected=-0.000, deviation=0.588\n\u2022 P4_HT_PG: actual=-0.479, expected=-1.342, deviation=0.863\n\u2022 P4_HT_RS: actual=0.128, expected=-1.231, deviation=1.359\n\nRoot causes identified: P4_HT_LD, P4_HT_RS\nCascade effects: P2_B2016, P4_HT_PG\n\nCounterfactual: If P4_HT_LD, P4_HT_RS had maintained normal values, the cascade would not have occurred."
+  },
+  {
+    "sample_index": "748",
+    "anomalous_variables": [
+      "P4_HT_LD"
+    ],
+    "causal_paths": [
+      "P4_HT_LD (root cause)"
+    ],
+    "explanation": "\u2022 P4_HT_LD: actual=0.678, expected=-0.000, deviation=0.678\n\nRoot causes identified: P4_HT_LD\n\nCounterfactual: If P4_HT_LD had maintained normal values, the cascade would not have occurred."
+  }
+]

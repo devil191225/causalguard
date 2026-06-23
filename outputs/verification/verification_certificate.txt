@@ -1,0 +1,13 @@
+========================================================================
+CAUSALGUARD PHASE 2 — VERIFICATION CERTIFICATE (machine summary)
+========================================================================
+ISO timestamp: 2026-05-07T16:38:52.850378
+Properties verified: 4 / 5
+Formal JSON: outputs\verification\verification_results.json
+Informal appendix: outputs\verification\verification_proof_appendix.md
+
+  [CAUSAL_CONSISTENCY]: VERIFIED=True
+  [BOUNDED_FPR]: VERIFIED=True
+  [BOUNDED_FNR]: VERIFIED=True
+  [CAUSAL_PATH_VALIDITY]: VERIFIED=True
+  [ANOMALY_MONOTONICITY]: VERIFIED=False

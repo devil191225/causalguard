@@ -1,0 +1,51 @@
+{
+  "edge_cases": {},
+  "noise_tests": {
+    "10%": {
+      "error": "Found input variables with inconsistent numbers of samples: [1000, 3]"
+    },
+    "20%": {
+      "error": "Found input variables with inconsistent numbers of samples: [1000, 3]"
+    },
+    "30%": {
+      "error": "Found input variables with inconsistent numbers of samples: [1000, 3]"
+    },
+    "50%": {
+      "error": "Found input variables with inconsistent numbers of samples: [1000, 3]"
+    },
+    "80%": {
+      "error": "Found input variables with inconsistent numbers of samples: [1000, 3]"
+    }
+  },
+  "performance_tests": {
+    "training_time_seconds": 29.26538634300232,
+    "inference_latency_ms": {
+      "mean": 52.982832000998314,
+      "median": 51.1269499984337,
+      "p95": 64.89532501000213,
+      "p99": 71.12898598657924,
+      "max": 77.21610000589862
+    },
+    "throughput_samples_per_second": 18.87403829189723
+  },
+  "causal_validation": {
+    "expected_edges": [
+      "('P1', 'P3')",
+      "('P3', 'P4')",
+      "('P2', 'P3')",
+      "('P1', 'P2')"
+    ],
+    "learned_edges": [
+      "('P1', 'P3')",
+      "('P2', 'P3')",
+      "('P3', 'P4')",
+      "('P1', 'P2')"
+    ],
+    "true_positives": 4,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "edge_precision": 1.0,
+    "edge_recall": 1.0,
+    "edge_f1_score": 1.0
+  }
+}

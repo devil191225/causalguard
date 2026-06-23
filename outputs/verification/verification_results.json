@@ -1,0 +1,220 @@
+{
+  "verification_date": "2026-05-07T16:38:52.850378",
+  "properties_tested": 5,
+  "properties_verified": 4,
+  "verification_pass_rate": 0.8,
+  "results": {
+    "causal_consistency": {
+      "property": "CAUSAL_CONSISTENCY",
+      "verified": true,
+      "consistency_rate": 0.9923444444444445,
+      "total_predictions": 180000,
+      "within_bounds": 178622,
+      "violations": [
+        {
+          "feature": "P1_B2004",
+          "num_violations": 135,
+          "violation_rate": 0.015,
+          "epsilon": 0.7833964853983484
+        },
+        {
+          "feature": "P1_B2005",
+          "num_violations": 18,
+          "violation_rate": 0.002,
+          "epsilon": 2.8499999999999996
+        },
+        {
+          "feature": "P1_B2006",
+          "num_violations": 26,
+          "violation_rate": 0.0028888888888888888,
+          "epsilon": 2.8499999999999996
+        },
+        {
+          "feature": "P1_B2007",
+          "num_violations": 31,
+          "violation_rate": 0.0034444444444444444,
+          "epsilon": 2.8499999999999996
+        },
+        {
+          "feature": "P1_B2008",
+          "num_violations": 126,
+          "violation_rate": 0.014,
+          "epsilon": 1.1547344110641082
+        },
+        {
+          "feature": "P2_B2016",
+          "num_violations": 134,
+          "violation_rate": 0.014888888888888889,
+          "epsilon": 2.027831136147107
+        },
+        {
+          "feature": "P2_B2017",
+          "num_violations": 36,
+          "violation_rate": 0.004,
+          "epsilon": 2.8499999999999996
+        },
+        {
+          "feature": "P2_B2018",
+          "num_violations": 38,
+          "violation_rate": 0.004222222222222222,
+          "epsilon": 2.8499999999999996
+        }
+      ],
+      "confidence_level": 0.95,
+      "training_backed_bounds": true
+    },
+    "bounded_fpr": {
+      "property": "BOUNDED_FPR",
+      "verified": true,
+      "fpr": 0.0,
+      "alpha_threshold": 0.1,
+      "false_positives": 0,
+      "true_negatives": 0
+    },
+    "bounded_fnr": {
+      "property": "BOUNDED_FNR",
+      "verified": true,
+      "fnr": 0.035,
+      "beta_threshold": 0.2,
+      "false_negatives": 35,
+      "true_positives": 965
+    },
+    "causal_path_validity": {
+      "property": "CAUSAL_PATH_VALIDITY",
+      "verified": true,
+      "validity_rate": 0.9260204081632653,
+      "multi_feature_anomaly_samples": 784,
+      "structurally_supported": 726,
+      "invalid_paths_detail": [
+        {
+          "sample_idx": 10,
+          "features": [
+            "P2_B2016",
+            "P4_HT_PG",
+            "P4_HT_CT"
+          ]
+        },
+        {
+          "sample_idx": 18,
+          "features": [
+            "P2_B2016",
+            "P2_B2017",
+            "P4_HT_PG"
+          ]
+        },
+        {
+          "sample_idx": 29,
+          "features": [
+            "P2_B2016",
+            "P2_B2017",
+            "P2_B2019",
+            "P4_HT_PG"
+          ]
+        },
+        {
+          "sample_idx": 30,
+          "features": [
+            "P2_B2016",
+            "P2_B2017",
+            "P3_B2022",
+            "P4_HT_PG"
+          ]
+        },
+        {
+          "sample_idx": 32,
+          "features": [
+            "P2_B2016",
+            "P2_B2017",
+            "P4_HT_PG"
+          ]
+        },
+        {
+          "sample_idx": 48,
+          "features": [
+            "P2_B2016",
+            "P2_B2017",
+            "P4_HT_PG"
+          ]
+        },
+        {
+          "sample_idx": 80,
+          "features": [
+            "P1_B2004",
+            "P2_B2019",
+            "P3_B2021",
+            "P3_B2022"
+          ]
+        },
+        {
+          "sample_idx": 90,
+          "features": [
+            "P1_B2004",
+            "P2_B2016",
+            "P2_B2017",
+            "P3_B2021"
+          ]
+        },
+        {
+          "sample_idx": 91,
+          "features": [
+            "P2_B2016",
+            "P2_B2017",
+            "P4_HT_PG"
+          ]
+        },
+        {
+          "sample_idx": 115,
+          "features": [
+            "P2_B2016",
+            "P2_B2017",
+            "P3_B2021",
+            "P3_B2022",
+            "P4_HT_PG"
+          ]
+        },
+        {
+          "sample_idx": 144,
+          "features": [
+            "P2_B2016",
+            "P2_B2017",
+            "P3_B2021",
+            "P3_B2022",
+            "P4_HT_PG"
+          ]
+        },
+        {
+          "sample_idx": 160,
+          "features": [
+            "P1_B2004",
+            "P2_B2016",
+            "P2_B2017",
+            "P4_HT_PG"
+          ]
+        }
+      ]
+    },
+    "anomaly_monotonicity": {
+      "property": "ANOMALY_MONOTONICITY",
+      "verified": false,
+      "spearman_aggregate_deviation": 0.8906811506811508,
+      "pairwise_strict_rate": 0.8559986651092941,
+      "pairs_tested": 5993,
+      "pairwise_violations": 863,
+      "aggregate_score": "sum(abs residuals); deviation=max(abs residuals)"
+    }
+  },
+  "theoretical_notes": "## Theoretical scaffolding (Gaussian / independence approximations)\n\n**Theorem sketch (bounded FPR under Gaussian normal operation).**\nLet each standardized residual $\\epsilon_i$ behave approximately as $\\mathcal{N}(0, \\sigma_i^2)$ under \nnormal operation. For threshold $t_i = k \\sigma_i$, the per-sample per-feature probability of exceeding \n$t_i$ is approximately $2\\Phi(-k)$ for two-sided deviations, yielding a controllable nominal false-alert rate \nwhen residuals are calibrated on normal data.\n\n**Theorem sketch (structural SCM consistency).**\nIf each structural equation is learned with RMS residual bounded by $\\eta_i$ over the training distribution \nof parents, then for draws from that distribution, $|X_i - \\hat f_i(\\mathrm{Pa}(X_i))| \\leq \\rho_i$\nwith empirical probability $\\geq \\hat p_i$ estimated on held-out normal data \u2014 the quantity our \nverification measures.\n\nThese statements are **not** machine-checked proofs about the ICS plant \u2014 they summarize standard \nGaussian tail bounds and SCM regression residuals used as assurance evidence.",
+  "adversarial_summary": {
+    "metrics": {
+      "detection_rate_clean_under_attack_windows": 0.965,
+      "detection_rate_fgsm_under_attack_windows": 0.964,
+      "detection_rate_pgd_under_attack_windows": 0.965,
+      "detection_rate_model_informed_under_attack_windows": 0.964,
+      "evasion_flip_rate_fgsm": 0.001,
+      "evasion_flip_rate_pgd": 0.0,
+      "epsilon_l_inf_scaled_space": 0.15,
+      "mean_l_inf_perturbation_fgsm_approx": 4.064911250799411
+    },
+    "subsample_rows": 128
+  }
+}
