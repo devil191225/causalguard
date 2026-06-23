@@ -1,3 +1,8 @@
+> [!NOTE]
+> **Authorized Use Only** — This is a security research project. Use only on systems you own or have explicit written authorization to access/monitor. Read [DISCLAIMER.md](./DISCLAIMER.md) and [LICENSE](./LICENSE) before use.
+
+---
+
 # Certifiable Anomaly Detection (CausalGuard)
 
 Research software for **causal, explainable anomaly detection** on industrial control telemetry, with optional **formal verification** of detection properties and **stress testing** via synthetic edge cases and realistic attack scenarios.
